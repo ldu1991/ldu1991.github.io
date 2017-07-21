@@ -1,0 +1,22 @@
+{
+  "name": "start",
+  "description": "no desd",
+  "main": "",
+  "authors": [
+    "Denis Lipatov"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap-sass": "latest",
+    "owl.carousel": "^2.2.1"
+  }
+}

@@ -1,0 +1,137 @@
+//////////////////////////////////////////////
+// HEADER
+//////////////////////////////////////////////
+.site-heder {
+    height: auto;
+    position: relative;
+
+    @include max-screen(767px) {
+        border-bottom: 1px solid $bgc_foofter;
+    }
+
+    @include min-screen(992px) {
+        padding-bottom: 60px;
+    }
+
+    &__logo {
+        line-height: 120px;
+        display: block;
+        text-align: center;
+
+        img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @include max-screen(991px) {
+            line-height: 96px;
+            width: 172px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    .search {
+        position: relative;
+        display: block;
+        margin-top: 42px;
+
+        @include max-screen(991px) {
+            margin-top: 30px;
+        }
+
+        @include max-screen(767px) {
+            display: none;
+        }
+
+        &__query {
+            @include font-rem(400, 15, 33);
+            font-family: 'OpenSansRegular';
+            width: 100%;
+            background-color: #FFF;
+            border-radius: 2px;
+            height: 35px;
+            padding: 0 100px 0 15px;
+            border: 1px solid #a1a1a1;
+            @include placeholder(#5e5d5c);
+        }
+
+        &__submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+        	width: 76px;
+        	height: 35px;
+        	border-radius: 2px;
+        	background-color: #0049b0;
+            color: #fff;
+            border-color: transparent;
+        }
+
+    }
+
+    // menu
+    &__menu {
+    	background-color: $bg_menu_a;
+
+        @include max-screen(991px) {
+            display: none;
+        }
+
+        &.default {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+
+            li {
+                flex-grow: 1;
+
+                a {
+                    @include font-rem(700, 14, 60);
+                    font-family: 'RobotoBold';
+                    text-align: center;
+                    color: $color_a;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease-in-out;
+                    display: block;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $color_b;
+                        background-color: $bg_menu_b;
+                    }
+
+                }
+
+                &.current > a {
+                    color: $color_b;
+                    background-color: $bg_menu_b;
+                }
+
+            }
+
+        }
+
+    }
+
+}

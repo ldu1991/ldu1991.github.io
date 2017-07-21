@@ -1,0 +1,27 @@
+.mobile-search {
+    position: relative;
+
+    @include min-screen(768px) {
+        display: none;
+    }
+
+    .search {
+
+        &.mobsearch {
+            margin-top: 0;
+            padding: 15px;
+            background-color: $bgc_foofter;
+            margin-left: -15px;
+            margin-right: -15px;
+            display: none;
+        }
+
+        &__submit {
+            top: 15px;
+            right: 15px;
+        }
+
+    }
+
+
+}

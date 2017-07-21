@@ -1,0 +1,59 @@
+.owl-nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 44px;
+
+    .owl-prev,
+    .owl-next {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #dadada;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: border-color 0.2s ease-in-out;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            border-color: #0049b0;
+        }
+
+    }
+
+    .owl-prev {
+        left: -60px;
+
+        &:before {
+            @extend %prev;
+        }
+
+        &:hover:before {
+            @extend %prev-hover;
+        }
+
+    }
+
+    .owl-next {
+        right: -60px;
+
+        &:before {
+            @extend %next;
+        }
+
+        &:hover:before {
+            @extend %next-hover;
+        }
+
+    }
+
+}
