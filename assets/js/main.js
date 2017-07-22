@@ -105,8 +105,6 @@ jQuery(document).ready(function($){
         } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
             $('.clone-sidebar').remove();
             fnlogic = true;
-        } else {
-            return
         }
     };
     footerResize();
