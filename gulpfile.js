@@ -139,7 +139,7 @@ gulp.task('watch', function () {
 
 gulp.task('dev', gulpSequence('sass:dev', 'js', ['watch', 'server']));
 
-gulp.task('prod', ['sass:prod', 'js', 'img']);
+gulp.task('prod', ['sass:prod', 'js']);
 
 gulp.task('update-modul', function () {
     gulp.src('package.json')

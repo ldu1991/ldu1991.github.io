@@ -97,11 +97,16 @@ jQuery(document).ready(function($){
 /* -------------------- End Search Mobile ------------------- */
 
 /* --------------------- Sidebar Footer --------------------- */
+    var fnlogic = true;
     function footerResize() {
-        if( $('html').width() < 768 && !$('.sidebar-block').is('.clone-sidebar')) {
+        if( $(window).width() <= 750 && !$('.sidebar-block').is('.clone-sidebar') && fnlogic ) {
             $('.sidebar-block').clone(true, true).addClass('clone-sidebar').appendTo('.mobfooter');
-        } else {
+            fnlogic = false;
+        } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
             $('.clone-sidebar').remove();
+            fnlogic = true;
+        } else {
+            return
         }
     };
     footerResize();
