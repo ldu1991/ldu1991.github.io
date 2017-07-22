@@ -13640,14 +13640,14 @@ jQuery(document).ready(function($){
 /* -------------------- End Search Mobile ------------------- */
 
 /* --------------------- Sidebar Footer --------------------- */
-    var fnlogic = true;
+    var fnlogic = false;
     function footerResize() {
-        if( $(window).width() <= 750 && !$('.sidebar-block').is('.clone-sidebar') && fnlogic ) {
+        if( $(window).width() <= 750 && !$('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
             $('.sidebar-block').clone(true, true).addClass('clone-sidebar').appendTo('.mobfooter');
-            fnlogic = false;
-        } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
-            $('.clone-sidebar').remove();
             fnlogic = true;
+        } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && fnlogic ) {
+            $('.clone-sidebar').remove();
+            fnlogic = false;
         }
     };
     footerResize();
