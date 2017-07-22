@@ -61,6 +61,7 @@
             color: #000;
             cursor: pointer;
             position: relative;
+            outline: none;
 
             &.ui-state-active {
                 color: $color_b;
