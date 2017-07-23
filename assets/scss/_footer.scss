@@ -21,8 +21,10 @@
     }
 
     .sidebar-block {
-        @include max-screen(767px) {
-            display: none;
+        display: none;
+
+        @include min-screen(768px) {
+            display: block;
         }
     }
 

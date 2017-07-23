@@ -68,7 +68,7 @@ gulp.task('sass:prod', function() {
     gulp.src(path.src.sassGen)
         .pipe(plumber({errorHandler: onError}))
         .pipe(sass())
-        //.pipe(cmq({beautify: false}))
+        .pipe(cmq({beautify: false}))
         .pipe(autoprefixer(['last 40 versions', '> 5%', 'ie 6-9', 'iOS 7'], {cascade: true}))
         .pipe(csso())
         .pipe(gulp.dest(path.build.css));

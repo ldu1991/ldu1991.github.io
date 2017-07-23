@@ -13644,7 +13644,7 @@ jQuery(document).ready(function($){
     function footerResize() {
         if( $(window).width() <= 750 && !$('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
             $('.sidebar-block').clone(true, true).addClass('clone-sidebar').appendTo('.mobfooter');
-            fnlogic = true;
+            fnlogic = true;   
         } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && fnlogic ) {
             $('.clone-sidebar').remove();
             fnlogic = false;
