@@ -20,20 +20,20 @@ var gulp            = require('gulp'),
 
 var path = {
     src: {
-        sassAll: 'assets/scss/**/*.scss',
-        sassGen: 'assets/scss/[^_]*.scss',
-        js: 'assets/js/libs/**/*.js',
-        img: 'assets/images/dev/**/*',
-        imgSprite: 'assets/images/sprites/*.*',
-        imgSpritePath: 'assets/images/sprite.png',
+        sassAll: 'scss/**/*.scss',
+        sassGen: 'scss/[^_]*.scss',
+        js: 'js/libs/**/*.js',
+        img: 'images/dev/**/*',
+        imgSprite: 'images/sprites/*.*',
+        imgSpritePath: 'images/sprite.png',
         files: '**/*.html'
     },
     build: {
         css: '.',
-        js: 'assets/js/',
-        img: 'assets/images/',
-        imgSprite: 'assets/images/',
-        scssSprite: 'assets/scss/',
+        js: 'js/',
+        img: 'images/',
+        imgSprite: 'images/',
+        scssSprite: 'scss/',
     }
 };
 
@@ -76,11 +76,11 @@ gulp.task('sass:prod', function() {
 
 gulp.task('js', function() {
     gulp.src([
-            'assets/bower/jquery/dist/jquery.js',
-            'assets/bower/jquery-ui/jquery-ui.min.js',
-            'assets/bower/owl.carousel/dist/owl.carousel.js',
+            'bower/jquery/dist/jquery.js',
+            'bower/jquery-ui/jquery-ui.min.js',
+            'bower/owl.carousel/dist/owl.carousel.js',
             path.src.js,
-            'assets/js/main.js'
+            'js/main.js'
             ])
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
@@ -88,11 +88,11 @@ gulp.task('js', function() {
         .pipe(gulp.dest(path.build.js));
 
     gulp.src([
-            'assets/bower/jquery/dist/jquery.js',
-            'assets/bower/jquery-ui/jquery-ui.min.js',
-            'assets/bower/owl.carousel/dist/owl.carousel.js',
+            'bower/jquery/dist/jquery.js',
+            'bower/jquery-ui/jquery-ui.min.js',
+            'bower/owl.carousel/dist/owl.carousel.js',
             path.src.js,
-            'assets/js/main.js'
+            'js/main.js'
             ])
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.min.js'))
@@ -120,7 +120,7 @@ gulp.task('sprite', function () {
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 imgPath: path.build.imgSpritePath,
-                cssTemplate: 'assets/images/spritesmith.scsstemplate',
+                cssTemplate: 'images/spritesmith.scsstemplate',
                 cssName: '_sprite.scss',
                 algorithm: 'binary-tree', //top-down
                 cssFormat: 'scss_maps',
@@ -133,7 +133,7 @@ gulp.task('sprite', function () {
 
 gulp.task('watch', function () {
 	gulp.watch(path.src.sassAll, ['sass:dev']);
-	gulp.watch(['assets/bower/jquery/dist/jquery.js', 'assets/bower/jquery-ui/jquery-ui.min.js', 'assets/bower/owl.carousel/dist/owl.carousel.js', path.src.js, 'assets/js/main.js'], ['js']);
+	gulp.watch(['bower/jquery/dist/jquery.js', 'bower/jquery-ui/jquery-ui.min.js', 'bower/owl.carousel/dist/owl.carousel.js', path.src.js, 'js/main.js'], ['js']);
     gulp.watch(path.src.imgSprite, ['sprite']);
 });
 

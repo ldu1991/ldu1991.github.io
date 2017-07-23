@@ -270,7 +270,7 @@ html {
             float: left;
             margin-top: 6px;
             margin-bottom: 6px;
-            background-image: url(assets/images/star.svg);
+            background-image: url(images/star.svg);
 
             &:before {
                 content: '';
@@ -282,7 +282,7 @@ html {
                 width: 60%;
                 top: 0;
                 left: 0;
-                background-image: url(assets/images/star.svg);
+                background-image: url(images/star.svg);
             }
         }
 
@@ -312,7 +312,7 @@ html {
                 float: right;
                 margin-top: 6px;
                 margin-bottom: 6px;
-                background-image: url(assets/images/star.svg);
+                background-image: url(images/star.svg);
                 transition: all 0.2s ease-in-out;
             }
 
