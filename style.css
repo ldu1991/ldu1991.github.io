@@ -6901,20 +6901,18 @@ html {
         top: 50%;
         right: 30px;
         transform: translateY(-50%); }
-    .site-footer .clone-sidebar ul {
-      display: none; }
-      .site-footer .clone-sidebar ul li {
-        border-bottom: 1px solid #fff;
-        padding-left: 45px;
-        transition: all 0.3s ease-in-out; }
-        .site-footer .clone-sidebar ul li a {
-          line-height: 45px;
-          display: block; }
-          .site-footer .clone-sidebar ul li a:hover {
-            font-family: 'RobotoRegular';
-            font-weight: 400; }
-        .site-footer .clone-sidebar ul li:hover {
-          background-color: #eaecf0; }
+    .site-footer .clone-sidebar ul li {
+      border-bottom: 1px solid #fff;
+      padding-left: 45px;
+      transition: all 0.3s ease-in-out; }
+      .site-footer .clone-sidebar ul li a {
+        line-height: 45px;
+        display: block; }
+        .site-footer .clone-sidebar ul li a:hover {
+          font-family: 'RobotoRegular';
+          font-weight: 400; }
+      .site-footer .clone-sidebar ul li:hover {
+        background-color: #eaecf0; }
   .site-footer .follow-us {
     padding-top: 10px; }
     .site-footer .follow-us:before, .site-footer .follow-us:after {
