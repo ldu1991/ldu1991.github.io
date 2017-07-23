@@ -13646,9 +13646,9 @@ jQuery(document).ready(function($){
             block_ac = '.sidebar-item';
 
         header.append('<span class="header-icon"></span>');
+        header.removeClass(active_class).next(block_ac).slideUp(300);
         header.click(function(){
             if(!$(this).hasClass(active_class)){
-            	header.removeClass(active_class).next(block_ac).slideUp(300);
             	$(this).addClass(active_class);
             	$(this).next(block_ac).slideDown(300);
             } else {
