@@ -97,31 +97,52 @@ jQuery(document).ready(function($){
 /* -------------------- End Search Mobile ------------------- */
 
 /* --------------------- Sidebar Footer --------------------- */
+    function accordionSidebar() {
+        var header = $('.clone-sidebar .title-sidebar'),
+            active_class = 'state-active',
+            block_ac = '.sidebar-item';
+
+        header.append('<span class="header-icon"></span>');
+        header.click(function(){
+            if(!$(this).hasClass(active_class)){
+            	header.removeClass(active_class).next(block_ac).slideUp(300);
+            	$(this).addClass(active_class);
+            	$(this).next(block_ac).slideDown(300);
+            } else {
+            	$(this).removeClass(active_class).next(block_ac).slideUp(300);
+            }
+        });
+    };
+
     var fnlogic = false;
     function footerResize() {
         if( $(window).width() <= 750 && !$('.sidebar-block').is('.clone-sidebar') && !fnlogic ) {
             $('.sidebar-block').clone(true, true).addClass('clone-sidebar').appendTo('.mobfooter');
-            fnlogic = true;   
+            accordionSidebar();
+            fnlogic = true;
         } else if( $(window).width() > 750 && $('.sidebar-block').is('.clone-sidebar') && fnlogic ) {
             $('.clone-sidebar').remove();
             fnlogic = false;
-        }
+        };
     };
     footerResize();
 
     $(window).resize(function() {
         footerResize();
-        $( ".mobfooter" ).accordion( "refresh" );
+        //$( ".mobfooter" ).accordion( "refresh" ); // jQuery UI Accordion refresh
     });
 
-    var icons = {
-      header: "ui-icon-arrow-e",
-      activeHeader: "ui-icon-arrow-s"
+    // jQuery UI Accordion
+/*    var icons = {
+      header: "icon-arrow-e",
+      activeHeader: "icon-arrow-s"
     };
     $( ".mobfooter" ).accordion({
         header: '.title-sidebar',
         icons: icons
-    });
+    });*/
+
+
 /* ------------------- End Sidebar Footer ------------------- */
 
 /* --------------- Deleting placeholder focus --------------- */

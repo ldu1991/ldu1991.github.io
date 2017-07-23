@@ -65,21 +65,37 @@
             position: relative;
             outline: none;
 
-            &.ui-state-active {
+            &.ui-state-active,
+            &.state-active{
                 color: $color_b;
             }
 
-            span.ui-accordion-header-icon {
+            .ui-accordion-header-icon {
                 position: absolute;
                 top: 50%;
                 right: 30px;
                 transform: translateY(-50%);
 
-                &.ui-icon-arrow-e {
+                &.icon-arrow-e {
                     @extend %arrows-e;
                 }
 
-                &.ui-icon-arrow-s {
+                &.icon-arrow-s {
+                    @extend %arrows-s;
+                }
+
+            }
+
+            .header-icon {
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
+                @extend %arrows-e;
+            }
+
+            &.state-active {
+                .header-icon {
                     @extend %arrows-s;
                 }
 
@@ -88,6 +104,7 @@
         }
 
         ul {
+            display: none;
 
             li {
                 border-bottom: 1px solid #fff;
