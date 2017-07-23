@@ -98,9 +98,9 @@ jQuery(document).ready(function($){
 
 /* --------------------- Sidebar Footer --------------------- */
     function accordionSidebar() {
-        var header = $('.clone-sidebar .title-sidebar'),
-            active_class = 'state-active',
-            block_ac = '.sidebar-item';
+        var header          = $('.clone-sidebar .title-sidebar'),
+            active_class    = 'state-active',
+            block_ac        = '.sidebar-item';
 
         header.append('<span class="header-icon"></span>');
         header.removeClass(active_class).next(block_ac).slideUp(300);
