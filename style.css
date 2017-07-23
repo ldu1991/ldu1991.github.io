@@ -6902,7 +6902,7 @@ html {
         right: 30px;
         transform: translateY(-50%); }
     .site-footer .clone-sidebar ul {
-      display: block; }
+      display: none; }
       .site-footer .clone-sidebar ul li {
         border-bottom: 1px solid #fff;
         padding-left: 45px;
