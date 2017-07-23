@@ -106,6 +106,7 @@ jQuery(document).ready(function($){
         header.removeClass(active_class).next(block_ac).slideUp(300);
         header.click(function(){
             if(!$(this).hasClass(active_class)){
+            	header.removeClass(active_class).next(block_ac).slideUp(300);
             	$(this).addClass(active_class);
             	$(this).next(block_ac).slideDown(300);
             } else {
