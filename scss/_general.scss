@@ -36,62 +36,6 @@ html {
 
 }
 
-// bootons bootstrap
-.btn {
-	height: 45px;
-	border-radius: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 9px;
-    margin-right: 9px;
-    text-transform: uppercase;
-    font-family: 'montserratregular';
-    border-color: transparent;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        border-color: transparent;
-    }
-
-    @include max-screen(991px) {
-        margin: 5px;
-    }
-
-}
-
-.btn-primary {
-    background-color: #0049b0;
-}
-
-.btn-default {
-    background-color: #FFF;
-    border: 1px solid #0049b0;
-    color: #0049b0;
-
-    &:hover {
-        border: 1px solid #0049b0;
-        background-color: #FCFCFC;
-    }
-
-}
-
-.btn-success {
-    background-color: #34bf49;
-}
-
-.btn-warning {
-    background-color: #f49a9e;
-
-    &:hover {
-        background-color: #F2888D;
-    }
-
-}
-
-.btn-danger {
-    background-color: #ed1c24;
-}
-
 
 // Inputs
 .block-inputs {
