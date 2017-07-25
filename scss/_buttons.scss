@@ -19,14 +19,18 @@
   white-space: nowrap;
 
   height: 45px;
-  margin-left: 9px;
-  margin-right: 9px;
+  margin: 9px;
   text-transform: uppercase;
   font-family: 'montserratregular';
   transition: all 0.2s ease-in-out;
 
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
+
+  @include min-screen(992px) {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
 
   &,
   &:active,
